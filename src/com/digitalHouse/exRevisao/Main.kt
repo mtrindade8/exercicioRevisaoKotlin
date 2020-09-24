@@ -1,6 +1,6 @@
 package com.digitalHouse.exRevisao
 
-fun Main(){
+fun main(){
 
     val livraria = Livraria()
 

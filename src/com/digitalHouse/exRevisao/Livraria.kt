@@ -11,7 +11,7 @@ class Livraria() {
         listaProdutos.forEach {
             when(it.codigo == codigo){
                 true -> {
-                    it.toString()
+                    println(it.toString())
                     return@forEach
                 }
             }
