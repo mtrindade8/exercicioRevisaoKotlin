@@ -23,10 +23,14 @@ class Livraria() {
         listaProdutos.forEach {
             when(it.codigo == codigo){
                 true -> {
-                    it.qtdEstoque--
-                    println("Venda efetuada do produto de código $codigo no valor de R$${it.preco}")
-                    if(it.qtdEstoque == 0) println("Estoque esgotado")
-                    return
+                    when(it.qtdEstoque == 0){
+                        true -> println("Estoque esgotado")
+                        false -> {
+                            it.qtdEstoque--
+                            println("Venda efetuada do produto de código $codigo no valor de R$${it.preco}")
+                            return
+                        }
+                    }
                 }
             }
         }
