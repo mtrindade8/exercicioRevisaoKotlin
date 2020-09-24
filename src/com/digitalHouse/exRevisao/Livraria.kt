@@ -9,14 +9,14 @@ class Livraria() {
 
     fun consultarProduto(codigo: Int) {
         listaProdutos.forEach {
-            when(it.codigo == codigo){
+            when(it.codigo == codigo) {
                 true -> {
                     println(it.toString())
-                    return@forEach
+                    return
                 }
             }
-
         }
+        println("Livro não encontrado")
     }
 
     fun efetuarVenda(codigo: Int){
@@ -24,8 +24,9 @@ class Livraria() {
             when(it.codigo == codigo){
                 true -> {
                     it.qtdEstoque--
+                    println("Venda efetuada do produto de código $codigo no valor de R$${it.preco}")
                     if(it.qtdEstoque == 0) println("Estoque esgotado")
-                    return@forEach
+                    return
                 }
             }
         }
