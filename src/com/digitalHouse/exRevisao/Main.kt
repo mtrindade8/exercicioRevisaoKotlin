@@ -16,8 +16,18 @@ fun main(){
     val colecao1 = Colecao(lista1, "Livros de Bolso", 6, 2, 58.50)
     val colecao2 = Colecao(lista2, "Livros Computação", 7, 1, 463.58)
 
+    livraria.cadastrarLivro(livro1)
+    livraria.cadastrarLivro(livro2)
+    livraria.cadastrarLivro(livro3)
+    livraria.cadastrarLivro(livro4)
+    livraria.cadastrarLivro(livro5)
+
+    livraria.cadastrarColecao(colecao1)
+    livraria.cadastrarColecao(colecao2)
+
     livraria.consultarProduto(2)
     livraria.consultarProduto(4)
+    livraria.consultarProduto(6)
     livraria.consultarProduto(8)
 
     livraria.efetuarVenda(1)
