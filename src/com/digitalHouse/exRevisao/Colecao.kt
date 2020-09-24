@@ -10,7 +10,7 @@ class Colecao(
 
     override fun toString(): String {
         var string = "Código: $codigo || Descrição: $descricao || Preço: $preco || Estoque: $qtdEstoque \n"
-        listaLivros.forEach(){string + it.toString() + "\n"}
+        listaLivros.forEach(){string += it.toString() + "\n"}
         return string
     }
 }
